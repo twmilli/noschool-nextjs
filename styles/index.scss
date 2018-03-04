@@ -1,0 +1,279 @@
+@import "variables.scss";
+@import "main_pane.scss";
+@import "filter_pane.scss";
+@import "program_item.scss";
+@import "checkbox.scss";
+@import "rc_slider.scss";
+
+body{
+    margin: 0;
+    padding: 0;
+    color: $accent3;
+    overflow-x: hidden;
+}
+
+html{
+    font-family: $font, "SourceSansPro", "Helvetica Neue",sans-serif;
+}
+
+.banner:before{
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.75;
+    background-image: linear-gradient(-239deg, #001CF5 0%, #9491FF 100%);
+}
+
+.banner{
+    position: relative;
+    background: url('http://d3bewr15g1kmwh.cloudfront.net/banner.png');
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+
+    .overlay{
+        color: white;
+        position: absolute;
+        text-align: left;
+        margin: auto;
+    }
+
+    .overlay.logo{
+        left: 40px;
+        top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .overlay.main{
+        font-weight: 700;
+        font-size: 44px;
+        top: 110px;
+        left: 275px;
+    }
+
+    .overlay.sub{
+        left: 275px;
+        top: 170px;
+        font-size: 24px;
+        font-weight: 400;
+    }
+    .overlay.contact{
+        right: 60px;
+        top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+}
+
+.content-header{
+    padding: 1rem 2rem;
+    border-bottom: 1px #586994 dashed;
+
+    .filters-btn{
+        background: #586994;
+        border-radius: 8px;
+        font-size: 20px;
+        color: #FFFFFF;
+        width: 7.75rem;
+        height: 2.75rem;
+        position: relative;
+        padding-left: 1.6rem;
+        border: 1px #586994 solid;
+
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        outline: none;
+
+        svg{
+            position: absolute;
+            bottom: 0.55rem;
+            left: 1rem;
+        }
+
+        &:hover{
+            color: #586994;
+            background-color: #fff;
+            cursor: pointer;
+        }
+    }
+
+    .clear-filters-btn{
+        border: 1px solid #586994;
+        border-radius: 62px;
+        /* Clear filters: */
+        font-size: 20px;
+        font-weight: 400;
+        color: #586994;
+        width: 7.75rem;
+        height: 2.75rem;
+        margin: 0 2rem;
+
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        outline: none;
+
+        &:hover{
+            background-color: #586994;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+}
+
+.home-main-container{
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    backface-visibility: hidden;
+    will-change: overflow;
+    justify-content: center;
+}
+
+.left-filters-pane,
+.right-main-bar{
+    overflow: auto;
+    height: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+}
+
+.right-main-bar{
+    flex: 1;
+}
+
+footer{
+    margin: 1.5rem;
+    text-align: center;
+    font-weight: 400;
+    svg{
+        color: #FD4134;
+        fill: #FD4134;
+        width: 15px;
+        height: 15px;
+    }
+
+    p{
+        line-height: 20px;
+        text-anchor: middle;
+        display: inline;
+        color: black;
+    }
+
+    a{
+        color: $accent1;
+    }
+
+    .feedback-link-container{
+        margin: 1rem;
+
+        svg{
+            fill: white;
+            color: $accent1;
+        }
+
+        a{
+            color: $accent1;
+        }
+    }
+}
+
+@media(max-width: 1240px){
+    .banner{
+        position: relative;
+        width: 100%;
+    
+        .overlay.main{
+            top: 110px;
+            left: 80px;
+        }
+    
+        .overlay.sub{
+            left: 80px;
+        }
+    }
+}
+
+@media(max-width: 1010px){
+    .banner{
+        position: relative;
+        width: 100%;
+        height: 240px;
+    
+        .overlay.main{
+            top: 70px;
+            font-size: 36px;
+        }
+    
+        .overlay.sub{
+            top: 120px;
+        }
+    }
+}
+
+@media(max-width: 841px){
+    .banner {
+        .overlay.sub {
+            top: 170px;
+        }
+    }
+}
+
+@media(max-width: 640px){
+    .banner{
+        position: relative;
+        width: 100%;
+        height: 270px;
+    
+        .overlay.main{
+            left: 40px;
+            font-size: 32px;
+        }
+    
+        .overlay.sub{
+            left: 40px;
+            font-size: 17px;
+        }
+    }
+}
+
+@media(max-width: 450px){
+    .banner{
+        position: relative;
+        width: 100%;
+        height: 270px;
+    
+        .overlay.main{
+            left: 20px;
+            right: 20px;
+        }
+    
+        .overlay.sub{
+            top: 210px;
+            left: 20px;
+            right: 20px;
+        }
+        .overlay.logo{
+            left: 20px;
+        }
+        .overlay.contact{
+            right: 20px;
+        }
+    }
+}

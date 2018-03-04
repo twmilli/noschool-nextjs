@@ -1,0 +1,102 @@
+@import "variables.scss";
+
+body{
+  margin: 0;
+  padding: 0;
+  color: $accent3;
+  overflow-x: hidden;
+}
+
+html{
+  font-family: $font, "SourceSansPro", "Helvetica Neue",sans-serif;
+}
+
+.contact-container{
+  margin-top: 5rem;
+  margin-left: 8rem;
+  margin-bottom: 5rem;
+  a{
+    position: absolute;
+    left: 40px;
+    top: 20px;
+    text-decoration: none;
+    color: $gray3;
+
+    svg{
+      position: relative;
+      top: 5px;
+      width: 30px;
+      height: 20px;
+    }
+
+    &:hover{
+      color: $accent3;
+    }
+  }
+ form{
+   input{
+     max-width: 400px;
+    box-sizing: border-box;
+    padding: 0.65rem 0.7rem;
+    width: 80%;
+    display: block;
+    color: $accent3;
+    border: 1px solid $accent3;
+    margin: 1rem 0;
+    font-size: 16px;
+   }
+
+   input:focus, textarea:focus{
+    border-color: $accent3;
+    box-shadow: 0 0 2px 1px rgba(107, 119, 148, 0.5);
+    outline: none;
+   }
+
+   textarea{
+      box-sizing: border-box;
+     max-width: 600px;
+     padding: 0.65rem 0.7rem;
+     width: 90%;
+     height: 320px;
+     display: block;
+     color: $accent3;
+     border: 1px solid $accent3;
+     font-size: 16px !important;
+   }
+   
+   button[type="submit"]{
+    background: repeating-linear-gradient(45deg, #f0f1f4, #f0f1f4 1px, white 1px, white 6px);
+    margin: auto;
+    margin-top: 1rem;
+    padding: 0.75rem 2.5rem;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    font-weight: 400;
+    color: $accent3;
+    text-transform: uppercase;
+    border: 1px solid $accent3;
+
+    &:hover{
+      color: $accent2;
+      border-color: $accent2;
+    }
+   }
+   
+ } 
+}
+
+@media(max-width: 640px){
+  .contact-container{
+    margin-left: 2rem;
+    form{
+      textarea{
+        width: 80%;
+      }
+    }
+
+    a{
+      left: 1.5rem;
+    }
+  }
+}
