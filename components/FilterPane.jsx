@@ -1,5 +1,3 @@
-import 'rc-slider/assets/index.css';
-import 'rc-tooltip/assets/bootstrap.css'; //eslint-disable-line
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';

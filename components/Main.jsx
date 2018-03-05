@@ -3,7 +3,7 @@ import FilterPane from './FilterPane';
 import MainPane from './MainPane';
 
 
-const Desktop = () => (
+const Main = () => (
   <div className="home-main-container">
     <FilterPane />
     <div className="right-main-bar">
@@ -12,4 +12,4 @@ const Desktop = () => (
   </div>
 );
 
-export default Desktop;
+export default Main;

@@ -67,24 +67,25 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 24);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 24:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(25);
-
-
-/***/ }),
-
-/***/ 25:
+/***/ "/Users/taytaytrey/Projects/gapyearproject/gap-year-web-nextjs/node_modules/next/dist/pages/_document.js":
 /***/ (function(module, exports) {
 
 module.exports = require("/Users/taytaytrey/Projects/gapyearproject/gap-year-web-nextjs/node_modules/next/dist/pages/_document.js");
 
+/***/ }),
+
+/***/ 1:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("/Users/taytaytrey/Projects/gapyearproject/gap-year-web-nextjs/node_modules/next/dist/pages/_document.js");
+
+
 /***/ })
 
 /******/ });
+//# sourceMappingURL=_document.js.map
